@@ -13,10 +13,10 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5ecd7;
             min-height: 100vh;
             padding: 20px;
-            color: #333;
+            color: #1a3a52;
         }
 
         .container {
@@ -26,7 +26,7 @@
 
         header {
             text-align: center;
-            color: white;
+            color: #1a3a52;
             margin-bottom: 30px;
             padding: 20px;
         }
@@ -34,7 +34,17 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: none;
+        }
+
+        .crossed {
+            text-decoration: line-through;
+            text-decoration-color: #c0392b;
+            text-decoration-thickness: 3px;
+            opacity: 0.7;
+            font-size: 1.8em;
+            margin-bottom: 5px;
+            color: #1a3a52;
         }
 
         .subtitle {
@@ -47,21 +57,24 @@
             background: white;
             border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 20px rgba(26, 58, 82, 0.1);
+            border: 2px solid #1a3a52;
         }
 
         .menu-item {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #faf7f0;
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 15px;
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
+            border: 1px solid #e0ddd4;
         }
 
         .menu-item:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 20px rgba(26, 58, 82, 0.15);
+            border-color: #1a3a52;
         }
 
         .menu-item:active {
@@ -71,12 +84,12 @@
         .drink-name {
             font-size: 1.4em;
             font-weight: bold;
-            color: #667eea;
+            color: #1a3a52;
             margin-bottom: 8px;
         }
 
         .drink-description {
-            color: #666;
+            color: #5a6c7d;
             font-size: 0.95em;
             margin-bottom: 12px;
             line-height: 1.4;
@@ -85,11 +98,11 @@
         .drink-price {
             font-size: 1.1em;
             font-weight: bold;
-            color: #764ba2;
+            color: #2c5f7f;
         }
 
         .order-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a3a52;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -99,15 +112,15 @@
             cursor: pointer;
             width: 100%;
             margin-top: 10px;
-            transition: opacity 0.2s;
+            transition: background 0.2s;
         }
 
         .order-btn:hover {
-            opacity: 0.9;
+            background: #2c5f7f;
         }
 
         .order-btn:active {
-            opacity: 0.8;
+            background: #15293d;
         }
 
         .info-box {
@@ -144,72 +157,78 @@
 <body>
     <div class="container">
         <header>
-            <h1>🍹 Karta Pića 🍹</h1>
-            <p class="subtitle">Svako piće pomaže deci! <span class="heart">❤️</span></p>
+            <h1 class="crossed">KARTA PIĆA</h1>
+            <h1 style="font-size: 3em; margin-top: 0;">🍹 PIĆOVNIK 🍹</h1>
         </header>
 
         <div class="menu">
             <div class="menu-item">
-                <div class="drink-name">🍸 Mojito</div>
-                <div class="drink-description">Osvežavajući koktel sa mentom, rumom i limun sokom</div>
-                <div class="drink-price">200 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Mojito', 3030)">Poruči Mojito</button>
-            </div>
-
-            <div class="menu-item">
                 <div class="drink-name">🍺 Pivo</div>
-                <div class="drink-description">Hladno točeno pivo - domaće ili uvozno</div>
-                <div class="drink-price">150 RSD</div>
+                <div class="drink-description">'Ladno pivo kao srce bivše</div>
+                <div class="drink-price">200 RSD</div>
                 <button class="order-btn" onclick="orderDrink('Pivo', 3030)">Poruči Pivo</button>
             </div>
 
             <div class="menu-item">
-                <div class="drink-name">🍷 Vino</div>
-                <div class="drink-description">Čaša crvenog ili belog vina po izboru</div>
-                <div class="drink-price">180 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Vino', 3030)">Poruči Vino</button>
+                <div class="drink-name">🥃 Rakija</div>
+                <div class="drink-description">BB klekovača</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Rakija', 3030)">Poruči Rakiju</button>
             </div>
 
             <div class="menu-item">
-                <div class="drink-name">🍹 Margarita</div>
-                <div class="drink-description">Klasični koktel sa tekilom, limunom i solju</div>
-                <div class="drink-price">220 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Margarita', 3030)">Poruči Margaritu</button>
+                <div class="drink-name">🍸 Whiskey Sour</div>
+                <div class="drink-description">Jedini gospodski koktel</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Whiskey Sour', 3030)">Poruči Whiskey Sour</button>
             </div>
 
             <div class="menu-item">
-                <div class="drink-name">🥃 Viski</div>
-                <div class="drink-description">Premium viski sa ledom ili bez</div>
-                <div class="drink-price">250 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Viski', 3030)">Poruči Viski</button>
+                <div class="drink-name">🍯 Bee's Knees</div>
+                <div class="drink-description">Pederski koktel broj 1</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Bee\'s Knees', 3030)">Poruči Bee's Knees</button>
             </div>
 
             <div class="menu-item">
-                <div class="drink-name">🍊 Sok</div>
-                <div class="drink-description">Prirodni voćni sok - narandža, jabuka ili breskva</div>
-                <div class="drink-price">100 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Sok', 3030)">Poruči Sok</button>
+                <div class="drink-name">🍹 Cuba Libre</div>
+                <div class="drink-description">Pederski koktel broj 2</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Cuba Libre', 3030)">Poruči Cuba Libre</button>
             </div>
 
             <div class="menu-item">
-                <div class="drink-name">☕ Espresso</div>
-                <div class="drink-description">Jaka kafa za energiju tokom cele noći</div>
-                <div class="drink-price">120 RSD</div>
-                <button class="order-btn" onclick="orderDrink('Espresso', 3030)">Poruči Espresso</button>
+                <div class="drink-name">🍸 Gin & Tonic</div>
+                <div class="drink-description">Pederski koktel broj 3</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Gin & Tonic', 3030)">Poruči Gin & Tonic</button>
+            </div>
+
+            <div class="menu-item">
+                <div class="drink-name">🍷 Belo Vino</div>
+                <div class="drink-description">Belo vino koje ima</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Belo Vino', 3030)">Poruči Belo Vino</button>
+            </div>
+
+            <div class="menu-item">
+                <div class="drink-name">🍒 Domaća Višnjevača</div>
+                <div class="drink-description">Domaća višnjevača of Magarevo</div>
+                <div class="drink-price">200 RSD</div>
+                <button class="order-btn" onclick="orderDrink('Domaća Višnjevača', 3030)">Poruči Višnjevaču</button>
             </div>
         </div>
 
-        <div class="info-box">
-            <p>🎉 Svaka porudžbina pomaže deci! 🎉</p>
-            <p>Kada "naručiš" piće, otvoriće se SMS poruka za donaciju.</p>
-            <p>Zabavljaj se i čini dobro! <span class="heart">❤️</span></p>
-        </div>
     </div>
 
     <script>
         function orderDrink(drinkName, smsNumber) {
-            // Tekst SMS poruke - možeš ga prilagoditi
-            const smsText = `DA`;
+            // Lista nasumičnih brojeva
+            const randomNumbers = [1922, 1919, 1916, 1915, 1911, 1902, 1901, 1899, 1898, 1895, 1894, 1892, 1891, 1889, 1886, 1880, 1878, 1876, 1875, 1874];
+            
+            // Izaberi nasumični broj
+            const randomIndex = Math.floor(Math.random() * randomNumbers.length);
+            const smsText = randomNumbers[randomIndex].toString();
             
             // Kreira SMS link
             const smsLink = `sms:${smsNumber}${getSMSSeparator()}body=${encodeURIComponent(smsText)}`;
@@ -219,7 +238,7 @@
             
             // Opciono: Prikaži potvrdu
             setTimeout(() => {
-                alert(`Hvala što pomažeš! ❤️\nPoručio/la si: ${drinkName}\n\nSMS aplikacija bi trebalo da se otvori sa porukom za donaciju.`);
+                alert(`Uskoro će vam se otvoriti SMS aplikacija i sve što je potrebno je da pritisnete dugme za slanje poruke`);
             }, 500);
         }
 
